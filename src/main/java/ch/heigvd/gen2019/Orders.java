@@ -18,7 +18,9 @@ public class Orders {
         return orders.get(i);
     }
 
-    void OrdersToString(StringBuffer sb) {
+    String OrdersToString() {
+        StringBuffer sb = new StringBuffer("{\"orders\": [");
+
         for (int i = 0; i < getOrdersCount(); i++) {
             sb.append(getOrder(i).orderToString()) ;
         }
@@ -26,5 +28,7 @@ public class Orders {
         if (getOrdersCount() > 0) {
             sb.delete(sb.length() - 2, sb.length());
         }
+
+        return sb.append("]}").toString();
     }
 }

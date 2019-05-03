@@ -8,11 +8,7 @@ public class OrdersWriter {
     }
 
     public String getContents() {
-        StringBuffer sb = new StringBuffer("{\"orders\": [");
-
-        orders.OrdersToString(sb);
-
-        return sb.append("]}").toString();
+        return orders.OrdersToString();
     }
 
 }
