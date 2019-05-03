@@ -27,7 +27,8 @@ public class Order {
         products.add(product);
     }
 
-    String orderToString() {
+    @Override
+    public String toString() {
         StringBuffer sb = new StringBuffer();
         sb.append("{");
         sb.append("\"id\": ");
@@ -35,7 +36,7 @@ public class Order {
         sb.append(", ");
         sb.append("\"products\": [");
         for (int j = 0; j < getProductsCount(); j++) {
-            sb.append(getProduct(j).productToString() );
+            sb.append(getProduct(j) );
         }
 
         if (getProductsCount() > 0) {
@@ -47,4 +48,5 @@ public class Order {
 
         return sb.toString();
     }
+
 }

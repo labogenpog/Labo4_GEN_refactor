@@ -47,7 +47,8 @@ public class Product {
        return this.size.toString();
     }
 
-    String productToString() {
+    @Override
+    public String toString() {
         StringBuffer sb = new StringBuffer();
         sb.append("{");
         sb.append("\"code\": \"");

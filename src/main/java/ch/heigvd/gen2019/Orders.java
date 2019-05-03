@@ -18,11 +18,12 @@ public class Orders {
         return orders.get(i);
     }
 
-    String OrdersToString() {
+    @Override
+    public String toString() {
         StringBuffer sb = new StringBuffer("{\"orders\": [");
 
         for (int i = 0; i < getOrdersCount(); i++) {
-            sb.append(getOrder(i).orderToString()) ;
+            sb.append(getOrder(i)) ;
         }
 
         if (getOrdersCount() > 0) {
