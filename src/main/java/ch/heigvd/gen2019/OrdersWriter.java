@@ -27,8 +27,8 @@ public class OrdersWriter {
                 sb.append("\"color\": \"");
                 sb.append(product.getColorFor());
                 sb.append("\", ");
-
-                if (product.getSize() != Product.SIZE_NOT_APPLICABLE) {
+                // test class Size only
+                if (product.getSize().toString() != "Invalid Size") {
                     sb.append("\"size\": \"");
                     sb.append(product.getSizeFor());
                     sb.append("\", ");
