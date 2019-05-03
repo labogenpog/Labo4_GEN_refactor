@@ -10,6 +10,12 @@ public class OrdersWriter {
     public String getContents() {
         StringBuffer sb = new StringBuffer("{\"orders\": [");
 
+        OrdersToString(sb);
+
+        return sb.append("]}").toString();
+    }
+
+    private void OrdersToString(StringBuffer sb) {
         for (int i = 0; i < orders.getOrdersCount(); i++) {
             sb.append(orders.getOrder(i).orderToString()) ;
         }
@@ -17,8 +23,6 @@ public class OrdersWriter {
         if (orders.getOrdersCount() > 0) {
             sb.delete(sb.length() - 2, sb.length());
         }
-
-        return sb.append("]}").toString();
     }
 
 }
