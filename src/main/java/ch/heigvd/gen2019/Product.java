@@ -4,7 +4,7 @@ import ch.heigvd.gen2019.sizes.*;
 import static ch.heigvd.gen2019.sizes.Size.CreateFromInt;
 
 public class Product {
-    public static final int SIZE_NOT_APPLICABLE = -1;
+    public static final String SIZE_NOT_APPLICABLE = "Invalid Size";
     private String code;
     private int color;
     private Size size;
