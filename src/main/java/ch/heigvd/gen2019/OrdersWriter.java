@@ -8,7 +8,7 @@ public class OrdersWriter {
     }
 
     public String getContents() {
-        return orders.OrdersToString();
+        return orders.toString();
     }
 
 }
