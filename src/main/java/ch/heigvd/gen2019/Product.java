@@ -35,4 +35,8 @@ public class Product {
     public String getCurrency() {
         return currency;
     }
+
+    String getColorFor() {
+        return Color.printColor(getColor());
+    }
 }

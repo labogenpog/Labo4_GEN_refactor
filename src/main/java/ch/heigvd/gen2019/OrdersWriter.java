@@ -25,7 +25,7 @@ public class OrdersWriter {
                 sb.append(product.getCode());
                 sb.append("\", ");
                 sb.append("\"color\": \"");
-                sb.append(getColorFor(product));
+                sb.append(product.getColorFor());
                 sb.append("\", ");
 
                 if (product.getSize() != Product.SIZE_NOT_APPLICABLE) {
@@ -76,7 +76,4 @@ public class OrdersWriter {
         }
     }
 
-    private String getColorFor(Product product) {
-        return Color.printColor(product.getColor());
-    }
 }
