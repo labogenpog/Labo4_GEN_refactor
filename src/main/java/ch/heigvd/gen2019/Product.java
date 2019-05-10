@@ -1,20 +1,19 @@
 package ch.heigvd.gen2019;
-import ch.heigvd.gen2019.sizes.*;
 
-import static ch.heigvd.gen2019.sizes.Size.CreateFromInt;
+
 
 public class Product {
     public static final String SIZE_NOT_APPLICABLE = "Invalid Size";
     private String code;
-    private int color;
+    private Color color;
     private Size size;
     private double price;
     private String currency;
 
-    public Product(String code, int color, int size, double price, String currency) {
+    public Product(String code, Color color, Size size, double price, String currency) {
         this.code = code;
         this.color = color;
-        this.size = CreateFromInt(size);
+        this.size = size;
         this.price = price;
         this.currency = currency;
     }
@@ -23,7 +22,7 @@ public class Product {
         return code;
     }
 
-    public int getColor() {
+    public Color getColor() {
         return color;
     }
 
@@ -40,7 +39,7 @@ public class Product {
     }
 
     String getColorFor() {
-        return Color.printColor(getColor());
+        return this.color.toString();
     }
 
     String getSizeFor() {

@@ -1,16 +1,27 @@
 package ch.heigvd.gen2019;
 
-public enum Color {
-    blue, red, yellow; //each is an instance of Color
+abstract public class Color {
+}
 
-    private Color(){}
+class Yellow extends Color{
+    @Override
+    public String toString(){
+        return "yellow";
+    }
+}
 
-    static public String printColor(int value){
-        if (value > Color.values().length) {
-            return "no color";
-        } else {
-            return (Color.values()[value-1].toString());
-        }
 
+class Blue extends Color{
+    @Override
+    public String toString(){
+        return "blue";
+    }
+}
+
+
+class Red extends Color{
+    @Override
+    public String toString(){
+        return "red";
     }
 }

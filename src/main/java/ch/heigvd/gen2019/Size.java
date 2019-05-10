@@ -1,29 +1,10 @@
-package ch.heigvd.gen2019.sizes;
+package ch.heigvd.gen2019;
 
 public class Size {
 
     @Override
     public String toString() {
         return "Invalid Size";
-    }
-    public static Size CreateFromInt(int i) {
-
-        switch (i) {
-            case 1:
-                return new SizeXS();
-            case 2:
-                return new SizeS();
-            case 3:
-                return new SizeM();
-            case 4:
-                return new SizeL();
-            case 5:
-                return new SizeXL();
-            case 6:
-                return new SizeXXL();
-            default:
-                return new Size();
-        }
     }
 }
 
