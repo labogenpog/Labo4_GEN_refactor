@@ -49,10 +49,11 @@ public class Product {
 
     @Override
     public String toString() {
-        StringBuffer sb = new StringBuffer();
-        sb.append("{");
-        sb.append("\"code\": \"");
-        sb.append(getCode());
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("{\"code\": \""+getCode()+",");
+        //sb.append("\"code\": \"");
+        //sb.append(getCode());
         sb.append("\", ");
         sb.append("\"color\": \"");
         sb.append(getColorFor());
