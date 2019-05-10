@@ -49,28 +49,19 @@ public class Product {
 
     @Override
     public String toString() {
+
         StringBuilder sb = new StringBuilder();
 
-        sb.append("{\"code\": \""+getCode()+",");
-        //sb.append("\"code\": \"");
-        //sb.append(getCode());
-        sb.append("\", ");
-        sb.append("\"color\": \"");
-        sb.append(getColorFor());
-        sb.append("\", ");
+        sb.append("{\"code\": \"" + getCode() + "\", ");
+        sb.append("\"color\": \"" + getColorFor() + "\", ");
+
         // test class Size only
         if (getSize().toString() != SIZE_NOT_APPLICABLE) {
-            sb.append("\"size\": \"");
-            sb.append(getSizeFor());
-            sb.append("\", ");
+            sb.append("\"size\": \"" + getSizeFor() + "\", ");
         }
 
-        sb.append("\"price\": ");
-        sb.append(getPrice());
-        sb.append(", ");
-        sb.append("\"currency\": \"");
-        sb.append(getCurrency());
-        sb.append("\"}, ");
+        sb.append("\"price\": " + getPrice() + ", ");
+        sb.append("\"currency\": \"" + getCurrency() + "\"}, ");
 
         return sb.toString();
     }
