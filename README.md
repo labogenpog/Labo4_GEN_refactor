@@ -3,8 +3,8 @@
 Tommy, Isaia et Basile
 
 Mauvaises odeurs vues : 
-Repeated Switches
-Messages Chains (pour les append)
-Long Function
-Fonction avec paramètre inutile (Fonctions au mauvais endroit)
-Nom de fonction pas adapté (ObjetToString -> ToString)
+ - Repeated Switches
+ - Messages Chains (pour les append)
+ - Long Function
+ - Fonction avec paramètre inutile (Fonctions au mauvais endroit)
+ - Nom de fonction pas adapté (ObjetToString -> ToString)
